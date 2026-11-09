@@ -1,6 +1,6 @@
 # Scan2Plan website · handoff for hosting
 
-Version 92g · 2026-11-09. One static site. No build step, no server code, no framework.
+Version 92i · 2026-11-09. One static site. No build step, no server code, no framework.
 
 ## What is here
 
@@ -68,15 +68,15 @@ Two documents sit behind an email gate. The gate asks for an address, records it
 
 Both files must stay shared as "anyone with the link" on the owner's Drive, or the gate opens a sign-in page.
 
-### Gates with no file behind them yet
+### Downloads waiting on files
 
-These open the same email dialog, say "Not on the site yet. Tell us where to send it.", and record the address. The owner sends the file by hand until a link is added to `window.GATE_URL` in `index.html` (one line, a name-to-URL map).
+Nothing on the site offers a file that does not exist. These are hidden until the owner supplies them; each returns by deleting one line in the owner's build:
 
-- `/assurance/` and the spec pages: "RFP Clauses", "BIM Standards Chart", "The Castle · Sample Model".
-- `/spec/language/`: the 18 "DOCX ↓" links (one per RFP clause) and "The insert pack".
-- `/spec/chart/`: "The chart".
-- `/spec/castle/`: the Castle sample downloads (Revit `.RVT`, AutoCAD `.DWG`, the PDF sheet set) are three rows that link to `#` today: no files yet. The owner supplies them.
-- The Proof Vault request on `/work/samples/` takes what the visitor is looking for plus an email, and until the endpoint exists opens a mail to `building@scan2plan.io` with both filled in.
+- the RFP clauses as Word files (18) and the insert pack, on `/spec/language/` (COPY on each clause copies its text today);
+- the BIM Standards Chart as a PDF or spreadsheet, on `/spec/chart/`;
+- the Castle sample files (Revit `.RVT`, AutoCAD `.DWG`, the PDF sheet set) and the nine CAD sheet pictures, on `/spec/castle/`.
+
+The Proof Vault request on `/work/samples/` takes what the visitor is looking for plus an email, and until the endpoint exists opens a mail to `building@scan2plan.io` with both filled in.
 
 ## What needs hooking up (the only server-side work)
 

@@ -43,7 +43,7 @@ No analytics tag is installed. Add one before `</head>` if wanted; the Privacy p
 | `/workshops/` | the four booking links | `calendar.app.google/KTF4vCznrx4es6xXA` (Google Calendar booking page) |
 | `/podcast/` and the episode pages | Apple Podcasts, Spotify, YouTube per episode | `podcasts.apple.com/us/podcast/…/id1818278951`, `podcasters.spotify.com/pod/show/practice-forward-podcast/…`, `www.youtube.com/watch?v=…`; the channels `www.youtube.com/@PracticeForwardPodcast` and `www.youtube.com/@scan2plan878` |
 | `/podcast/<n>/` | each guest's firm | the firm's own site (about thirty, for example `www.shoparc.com`, `www.bunchdesign.net`) |
-| `/about/`, footer | social | `www.linkedin.com/company/scan2plan/`, `x.com/Scan2Plan_io` |
+| footer (every page) | social | `www.linkedin.com/company/scan2plan/`, `www.youtube.com/@scan2plan878`, `x.com/Scan2Plan_io` |
 | `/case/guild/` | the newspaper story | `www.timesunion.com` |
 | `/assurance/`, `/spec/…`, the papers | cited standards | `bimforum.org`, `usibd.org`, `boma.org`, `www.cmaanet.org` (one PDF), `content.aia.org` (one PDF), `ascelibrary.org`, `getitright.uk.com`, `www.autodesk.com`, `www.twinearch.com` |
 
@@ -51,9 +51,9 @@ No analytics tag is installed. Add one before `</head>` if wanted; the Privacy p
 
 | Where | Address | How |
 |---|---|---|
-| `/book/`, footer, Contact lines | `building@scan2plan.io` | plain `mailto:` links; the footer and `/book/` also print it |
+| footer (every page), `/book/`, `/about/` | `building@scan2plan.io` | plain `mailto:` links, printed |
 | `/book/` (the three Open the Door links), `/partners/` (Reuse, Education, Heritage), `/careers/`, `/podcast/` | `v@scan2plan.io` | `mailto:` links with a subject filled in; the address is in the link, not printed |
-| footer, `/book/` | `(518) 362-2403` | a `tel:+15183622403` link |
+| footer (every page), `/book/` | `(518) 362-2403` | a `tel:+15183622403` link |
 
 Mail is the fallback for every form until the endpoint below exists.
 
@@ -63,8 +63,8 @@ Two documents sit behind an email gate. The gate asks for an address, records it
 
 | Document | Gate on | Drive file |
 |---|---|---|
-| Client Guide v3.1 | `/partners/`, the Standards hub (`/standards`, old links) | `drive.google.com/file/d/1mx6oX7Lo3VeZioQYLM4xjCpt2YPisr3N/view` |
-| Vendor Pack | `/work/capabilities/`, `/partners/` | `drive.google.com/file/d/1KNZwMBygGsvwYLWJFuJ9-iCleKt1nUfH/view` |
+| Client Guide v3.1 | `/assurance/` and the spec pages (`/spec/language/`, `/spec/castle/`, `/spec/chart/`); `/partners/` links to it | `drive.google.com/file/d/1mx6oX7Lo3VeZioQYLM4xjCpt2YPisr3N/view` |
+| Vendor Pack | `/work/capabilities/`; `/partners/` links to it | `drive.google.com/file/d/1KNZwMBygGsvwYLWJFuJ9-iCleKt1nUfH/view` |
 
 Both files must stay shared as "anyone with the link" on the owner's Drive, or the gate opens a sign-in page.
 
@@ -72,9 +72,10 @@ Both files must stay shared as "anyone with the link" on the owner's Drive, or t
 
 These open the same email dialog, say "Not on the site yet. Tell us where to send it.", and record the address. The owner sends the file by hand until a link is added to `window.GATE_URL` in `index.html` (one line, a name-to-URL map).
 
-- `/spec/language/`: the 18 "DOCX ↓" links (one per RFP clause) and the "RFP Clauses" pack.
-- The Standards hub (`/standards`, reachable by the old links): "BIM Standards Chart", "The chart", "The insert pack", "The Castle · Sample Model".
-- The Castle sample downloads (Revit `.RVT`, AutoCAD `.DWG`, the PDF sheet set) are three rows that link to `#` today: no files yet. The owner supplies them.
+- `/assurance/` and the spec pages: "RFP Clauses", "BIM Standards Chart", "The Castle · Sample Model".
+- `/spec/language/`: the 18 "DOCX ↓" links (one per RFP clause) and "The insert pack".
+- `/spec/chart/`: "The chart".
+- `/spec/castle/`: the Castle sample downloads (Revit `.RVT`, AutoCAD `.DWG`, the PDF sheet set) are three rows that link to `#` today: no files yet. The owner supplies them.
 - The Proof Vault request on `/work/samples/` takes what the visitor is looking for plus an email, and until the endpoint exists opens a mail to `building@scan2plan.io` with both filled in.
 
 ## What needs hooking up (the only server-side work)

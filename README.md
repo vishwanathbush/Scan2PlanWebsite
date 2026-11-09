@@ -1,6 +1,6 @@
 # Scan2Plan website · handoff for hosting
 
-Version 92i · 2026-11-09. One static site. No build step, no server code, no framework.
+Version 92j · 2026-11-09. One static site. No build step, no server code, no framework.
 
 ## What is here
 
@@ -40,7 +40,7 @@ No analytics tag is installed. Add one before `</head>` if wanted; the Privacy p
 
 | Page | Link | Goes to |
 |---|---|---|
-| `/workshops/` | the four booking links | `calendar.app.google/KTF4vCznrx4es6xXA` (Google Calendar booking page) |
+| `/workshops/` | the four booking links | `calendar.app.google/DKJs66boWGezev6r5` (Google Calendar booking page) |
 | `/podcast/` and the episode pages | Apple Podcasts, Spotify, YouTube per episode | `podcasts.apple.com/us/podcast/…/id1818278951`, `podcasters.spotify.com/pod/show/practice-forward-podcast/…`, `www.youtube.com/watch?v=…`; the channels `www.youtube.com/@PracticeForwardPodcast` and `www.youtube.com/@scan2plan878` |
 | `/podcast/<n>/` | each guest's firm | the firm's own site (about thirty, for example `www.shoparc.com`, `www.bunchdesign.net`) |
 | footer (every page) | social | `www.linkedin.com/company/scan2plan/`, `www.youtube.com/@scan2plan878`, `x.com/Scan2Plan_io` |

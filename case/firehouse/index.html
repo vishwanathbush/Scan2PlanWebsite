@@ -1198,7 +1198,7 @@ body:has(#s-work.active) .navpad{display:none}
 /* samples · black */
 #s-case .sa{background:#000;color:#fff} #s-case .sa .k{color:#bbb}
 #s-case .btn{display:inline-block;background:#fff;color:#000;text-decoration:none;font:700 12px/1 "Roboto Mono",monospace;letter-spacing:.14em;text-transform:uppercase;padding:18px 28px;border:1px solid #fff} #s-case .btn:hover{background:var(--blue);border-color:var(--blue);color:#fff}
-#s-case .btn.next{background:#000;color:#fff;margin-left:12px} #s-case .btn.next:hover{background:var(--blue);border-color:var(--blue)}   /* bonsai r77: the second button, outlined; the primary stays Samples' white */
+#s-case .btn.next{background:#000;color:#fff;margin-left:12px} #s-case .btn.next:hover{background:var(--blue);border-color:var(--blue)} @media(max-width:760px){#s-case .sa .major{display:flex;flex-direction:column;align-items:flex-start;gap:12px} #s-case .btn.next{margin-left:0}}   /* bonsai r77: the second button, outlined; the primary stays Samples' white */
 /* related · white · a strip of three, scrolled by the arrows */
 #s-case .rehead{display:flex;justify-content:space-between;align-items:center;margin-bottom:24px} #s-case .rehead .k{margin:0}
 #s-case .strip{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 64px) / 3);gap:32px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none} #s-case .strip::-webkit-scrollbar{display:none} #s-case .strip>.card{scroll-snap-align:start}

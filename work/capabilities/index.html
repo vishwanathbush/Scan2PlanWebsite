@@ -1973,8 +1973,8 @@ function route(){
   if(!location.hash.includes('#home-')) scrollTo(0,0);
 }
 const _nav=()=>{if(document.startViewTransition&&!matchMedia('(prefers-reduced-motion:reduce)').matches){var vt=document.startViewTransition(route);vt.ready.catch(function(){});vt.finished.catch(function(){})}else route()};
-addEventListener('hashchange',_nav);addEventListener('popstate',_nav);
-addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.getAttribute('href');if(!h||h[0]!=='/'||h[1]==='/'||a.target||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button)return;if(/\.[a-z0-9]{2,5}(#|$)/i.test(h))return;e.preventDefault();if(h===location.pathname+location.hash)return;history.pushState(null,'',h);_nav()});
+addEventListener('hashchange',_nav);addEventListener('popstate',()=>dispatchEvent(new HashChangeEvent('hashchange')));
+addEventListener('click',e=>{const a=e.target.closest('a');if(!a)return;const h=a.getAttribute('href');if(!h||h[0]!=='/'||h[1]==='/'||a.target||e.metaKey||e.ctrlKey||e.shiftKey||e.altKey||e.button)return;if(/\.[a-z0-9]{2,5}(#|$)/i.test(h))return;e.preventDefault();if(h===location.pathname+location.hash)return;history.pushState(null,'',h);dispatchEvent(new HashChangeEvent('hashchange'))});
 route();
 // in-page anchors on home (ENTER THE WORK → #home-work) are plain ids, not routes
 document.addEventListener('click',e=>{

@@ -1116,6 +1116,15 @@ else if (!Q.has('p')) {
   ScrollTrigger.create({ trigger: host, start: sticky ? 'top top' : 'top 96px', end: 'bottom bottom', pin: sticky ? false : stage, scrub: 0.5,
                          onUpdate: (self) => setProgress(self.progress) });
 }
+// Owen 2026-11-09 (phone): coming back to Home after another page, the pinned stage kept the measurements it had before the screen
+// was hidden, and the sequence broke. Whenever the route changes and Home is the active screen, the stage is refitted and
+// ScrollTrigger re-measured: once as the screen shows, once more after the route cross-fade (0.6 s) has ended.
+const rehome = () => {
+  const home = document.getElementById('s-home'); if (!home || !home.classList.contains('active')) return;
+  requestAnimationFrame(() => { fit(); ScrollTrigger.refresh(true); if (!REDUCED) setProgress(state.p); });
+};
+for (const ev of ['hashchange', 'popstate']) addEventListener(ev, () => { setTimeout(rehome, 120); setTimeout(rehome, 800); });
+addEventListener('pageshow', (e) => { if (e.persisted) rehome(); });
 
 const stats = () => ({
   segments: Object.fromEntries(Object.entries(lines).map(([g, a]) => [g, a.length / 6])),

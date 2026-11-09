@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+Disallow: /key/
+Sitemap: https://scan2plan.io/sitemap.xml

@@ -1,6 +1,6 @@
 # Scan2Plan website · handoff for hosting
 
-Version 93c · 2026-11-10. One static site. No build step, no server code, no framework.
+Version 93d · 2026-11-10. One static site. No build step, no server code, no framework.
 
 ## What is here
 
@@ -67,6 +67,8 @@ Two documents sit behind an email gate. The gate asks for an address, records it
 | Vendor Pack | `/work/capabilities/`; `/partners/` links to it | `drive.google.com/file/d/1KNZwMBygGsvwYLWJFuJ9-iCleKt1nUfH/view` |
 
 Both files must stay shared as "anyone with the link" on the owner's Drive, or the gate opens a sign-in page.
+
+A third gate has no file yet: "Scan2Plan BIM Standards" (the button "Download Scan2Plan BIM Standards (PDF)" under the three cards on `/assurance/`). It takes the address and says "Not on the site yet. Tell us where to send it." When the owner supplies the PDF, add its link to `window.GATE_URL` under that name.
 
 ### Downloads waiting on files
 

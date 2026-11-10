@@ -1,6 +1,6 @@
 # Scan2Plan website · handoff for hosting
 
-Version 92l · 2026-11-09. One static site. No build step, no server code, no framework.
+Version 93 · 2026-11-10. One static site. No build step, no server code, no framework.
 
 ## What is here
 
@@ -76,7 +76,7 @@ Nothing on the site offers a file that does not exist. These are hidden until th
 - the BIM Standards Chart as a PDF or spreadsheet, on `/spec/chart/`;
 - the Castle sample files (Revit `.RVT`, AutoCAD `.DWG`, the PDF sheet set) and the nine CAD sheet pictures, on `/spec/castle/`.
 
-The Proof Vault request on `/work/samples/` takes what the visitor is looking for plus an email, and until the endpoint exists opens a mail to `building@scan2plan.io` with both filled in.
+The Sample Vault request on `/work/samples/` takes what the visitor is looking for plus an email, and until the endpoint exists opens a mail to `building@scan2plan.io` with both filled in.
 
 ## What needs hooking up (the only server-side work)
 
@@ -84,7 +84,7 @@ Every form on the site posts to one endpoint. In `index.html` (and, because ever
 
     window.GATE_ENDPOINT=""
 
-Set it to a URL that accepts `POST` with a JSON body `{file, email, page}` (a form service, a serverless function, or the CRM). `file` is the document name from the tables above, or `"Proof Vault · <what the visitor typed>"`. While it is empty, the gates only log to the browser console and the Proof Vault request falls back to mail. The simplest change is a one-line find-and-replace across the 40 html files; the owner can also set it in the build and re-export.
+Set it to a URL that accepts `POST` with a JSON body `{file, email, page}` (a form service, a serverless function, or the CRM). `file` is the document name from the tables above, or `"Sample Vault · <what the visitor typed>"`. While it is empty, the gates only log to the browser console and the Sample Vault request falls back to mail. The simplest change is a one-line find-and-replace across the 40 html files; the owner can also set it in the build and re-export.
 
 ## Owner's notes
 

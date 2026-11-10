@@ -1,6 +1,6 @@
 # Scan2Plan website · handoff for hosting
 
-Version 93e · 2026-11-10. One static site. No build step, no server code, no framework.
+Version 93g · 2026-11-10. One static site. No build step, no server code, no framework.
 
 ## What is here
 
@@ -8,6 +8,7 @@ Version 93e · 2026-11-10. One static site. No build step, no server code, no fr
 - `sitemap.xml`, `robots.txt`, `404.html` (the site with no page shown; the router shows its not-found page).
 - `img/` · the pictures the pages use (`img/inl/` pictures that were once inlined, `img/cases/` the case studies, `img/cap/` the Capabilities rows, `img/og/` the share pictures).
 - `hero/` · the Home page's opening animation (`hero.js`, an ES module) and its pictures.
+- `img/aviation-hero.mp4` · one film (20 seconds, silent, H.264, 1280 × 720, 5.7 MB). It plays as a silent loop in two places: the Home page's opening screen and the Aviation Terminal block on `/work/`. `img/aviation-hero-poster.webp` is its first frame, shown until the film starts. The page asks for the film only when its block is on screen, and not at all when the visitor's system asks for reduced motion. The host must serve `.mp4` as `video/mp4` and answer byte-range requests (every static host named below does); Safari will not play it otherwise.
 - `favicon.svg`, `favicon-32.png`, `apple-touch-icon.png`.
 
 ## To run it

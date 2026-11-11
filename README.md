@@ -1,6 +1,6 @@
 # Scan2Plan website · handoff for hosting
 
-Version 94e · 2026-11-11. One static site. No build step, no server code, no framework.
+Version 94f · 2026-11-11. One static site. No build step, no server code, no framework.
 
 ## What is here
 
@@ -53,7 +53,7 @@ No analytics tag is installed. Add one before `</head>` if wanted; the Privacy p
 | Where | Address | How |
 |---|---|---|
 | footer (every page), `/book/`, `/about/` | `building@scan2plan.io` | plain `mailto:` links, printed |
-| `/book/` (the three Open the Door links), `/partners/` (Reuse, Education, Heritage), `/careers/`, `/podcast/` | `v@scan2plan.io` | `mailto:` links with a subject filled in; the address is in the link, not printed |
+| `/book/` (the three Open the Door links), `/careers/`, `/podcast/` | `v@scan2plan.io` | `mailto:` links with a subject filled in; the address is in the link, not printed |
 | footer (every page), `/book/` | `(518) 362-2403` | a `tel:+15183622403` link |
 
 Mail is the fallback for every form until the endpoint below exists.

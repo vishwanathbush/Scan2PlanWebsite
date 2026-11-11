@@ -1,6 +1,6 @@
 # Scan2Plan website · handoff for hosting
 
-Version 94f · 2026-11-11. One static site. No build step, no server code, no framework.
+Version 94g · 2026-11-11. One static site. No build step, no server code, no framework.
 
 ## What is here
 
